@@ -1,8 +1,18 @@
+import { Divider } from "@nextui-org/react";
+import TopicCreateForm from "./components/topics/topic-create-form";
+import TopicList from "./components/topics/topic-list";
 
 export default async function Home() {
 
-  return <>
-
-  </>;
+  return <div className="grid grid-cols-4 gap-4 p-4">
+    <div className="col-span-3">
+       <h1 className="text-xl m-2"></h1>
+    </div>
+    <div className="border shadow p-3">
+       <TopicCreateForm/>
+        <Divider className="my-2"/>
+       <TopicList/>
+    </div>
+  </div>;
   
 }
